@@ -4,7 +4,7 @@ const config = require('./base.config');
 if (!process.env.NODE_ENV) {
     process.env.NODE_ENV = 'dev';
 }
-console.log(process.env.NODE_ENV);
+console.log('当前环境', process.env.NODE_ENV);
 const plugins = config[process.env.NODE_ENV].plugins || [];
 module.exports = {
     mode: process.env.NODE_ENV === 'dev' ? 'development' : 'production',
